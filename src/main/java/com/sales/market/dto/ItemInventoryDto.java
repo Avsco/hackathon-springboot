@@ -1,21 +1,11 @@
-/**
- * @author: Edson A. Terceros T.
- */
+package com.sales.market.dto;
 
-package com.sales.market.model;
+import com.sales.market.model.Item;
+import com.sales.market.model.ItemInventory;
 
-import com.sales.market.dto.ItemInventoryDto;
-
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import java.math.BigDecimal;
 
-@Entity
-public class ItemInventory extends ModelBase<ItemInventoryDto> {
-
-    @OneToOne
+public class ItemInventoryDto extends DtoBase<ItemInventory> {
     private Item item;
     private BigDecimal stockQuantity;
 

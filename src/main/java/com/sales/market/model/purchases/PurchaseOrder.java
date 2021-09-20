@@ -50,4 +50,21 @@ public class PurchaseOrder extends ModelBase {
     @Column(nullable = false, precision = 16, scale = 2)
     private BigDecimal balanceAmount = BigDecimal.ZERO;
 
+    public PurchaseOrderPaymentStatus getPaymentStatus() {
+        return paymentStatus;
+    }
+
+    public void setPaymentStatus(PurchaseOrderPaymentStatus paymentStatus) {
+        this.paymentStatus = paymentStatus;
+    }
+
+    public List<PurchaseOrderDetail> getPurchaseOrderDetailList() {
+        return purchaseOrderDetailList;
+    }
+
+    public void setPurchaseOrderDetailList(List<PurchaseOrderDetail> purchaseOrderDetailList) {
+        this.purchaseOrderDetailList = purchaseOrderDetailList;
+    }
+
+
 }
