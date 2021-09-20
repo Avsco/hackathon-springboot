@@ -21,4 +21,9 @@ public class ItemServiceImpl extends GenericServiceImpl<Item> implements ItemSer
     protected GenericRepository<Item> getRepository() {
         return repository;
     }
+
+    @Override
+    public Item getItemByCode(String code) {
+        return this.repository.findByCode(code);
+    }
 }
