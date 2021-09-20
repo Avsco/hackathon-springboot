@@ -32,7 +32,7 @@ public class ProviderItemServiceImpl extends GenericServiceImpl<ProviderItem> im
         Collection<ProviderItem> items = this.repository.findByProviderItemCode(ProviderItemCode);
 
         Optional<ProviderItem> providerItem = items.stream().reduce((acc, item) -> {
-            if(item.getPrice() > acc.getPrice()) return item;
+            if(item.getPrice() < acc.getPrice()) return item;
             return acc;
         });
 
