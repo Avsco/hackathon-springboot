@@ -1,5 +1,5 @@
 package com.sales.market.service;
-
+/*
 import com.sales.market.dto.MailDto;
 import io.jsonwebtoken.lang.Collections;
 import org.slf4j.Logger;
@@ -86,4 +86,4 @@ public class EmailService {
         return springTemplateEngine.process(templateName, context);
     }
 
-}
+}*/

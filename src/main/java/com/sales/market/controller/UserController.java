@@ -1,5 +1,5 @@
 package com.sales.market.controller;
-
+/*
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.sales.market.dto.*;
 import com.sales.market.model.User;
@@ -66,13 +66,14 @@ public class UserController extends GenericController<User, UserDto> {
         }
         return responseEntity;
     }
-
+*/
     /**
      * This method check if the token is valid and also checks if the user
      * performing the action is the same for whom the token was created.
      *
      * @throws IOException
      */
+    /*
     @PostMapping("/users")
     public ResponseEntity<Object> signUp(@RequestBody UserDto userDto, @RequestParam("token") String token)
             throws IOException {
@@ -195,4 +196,4 @@ public class UserController extends GenericController<User, UserDto> {
         return super.findModelById(id);
     }
 
-}
+}*/

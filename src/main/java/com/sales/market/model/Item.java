@@ -4,16 +4,23 @@
 
 package com.sales.market.model;
 
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
+import java.time.LocalDateTime;
 
 @Entity
 public class Item extends ModelBase {
     private String name;
     private String code;
     private Byte[] image;
+    private LocalDateTime expirationDate;
     @OneToOne(targetEntity = SubCategory.class)
     private SubCategory subCategory;
+
+    public LocalDateTime getExpirationDate() {
+        return expirationDate;
+    }
 
     public String getName() {
         return name;
